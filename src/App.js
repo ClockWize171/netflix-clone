@@ -1,13 +1,16 @@
 import { Navbar } from './components';
 import { Routes, Route } from 'react-router-dom';
-import { Home } from './pages';
+import { Home, Login, Account, SignUp } from './pages';
 
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path='/' exact element={<Home />}></Route>
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path='/account' element={<Account />} />
       </Routes>
     </>
   );
