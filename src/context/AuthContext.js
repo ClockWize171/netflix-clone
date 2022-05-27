@@ -21,7 +21,7 @@ export function AuthContextProvider({ children }) {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
-    function signOut(){
+    function logOut(){
         return signOut(auth)
     }
 
@@ -35,7 +35,7 @@ export function AuthContextProvider({ children }) {
     }, [])
     
 
-    const totalValues = { signUp, signIn, signOut, user,}
+    const totalValues = { signUp, signIn, logOut, user}
 
     return (
         <AuthContext.Provider value={totalValues}>
