@@ -18,7 +18,7 @@ export function AuthContextProvider({ children }) {
         createUserWithEmailAndPassword(auth, email, password);
         // firestore path
         setDoc(doc(db, 'users', email), {
-            savedData: []
+            saveData: []
         });
     }
 
